@@ -6,8 +6,10 @@
 *        Mail: admin@wysaid.org
 */
 
-#ifdef _CGE_USE_FFMPEG_
+//ee
 
+#ifdef _CGE_USE_FFMPEG_
+//#err "wlz dddd"
 #include "cgeFFmpegHeaders.h"
 #include "cgeFFmpegNativeLibrary.h"
 #include "cgeCommonDefine.h"

@@ -3,6 +3,7 @@
 #replace the path below with your ndk-dir 
 #NDK=/Users/wangyang/android_dev/android-ndk
 
+NDK=$ANDROID_NDK
 if [[ "$NDK" == "" ]]; then
 
 echo "Please specify the NDK variable to your ndk-dir"

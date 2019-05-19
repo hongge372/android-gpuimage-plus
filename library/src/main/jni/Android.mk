@@ -107,10 +107,19 @@ LOCAL_LDLIBS :=  -llog -lEGL -lGLESv2 -ljnigraphics -latomic
 
 # 'CGE_USE_VIDEO_MODULE' determines if the project should compile with ffmpeg.
 
+#$(warning, "wlz here chechkout define ")
+ifeq ($(CGE_USE_VIDEO_MODULE), 1)
+#$(warning "wlz here use ifeq use ffmpeg")
+#VIDEO_MODULE_DEFINE = -D_CGE_USE_FFMPEG_ 
+endif
+
+#if CGE_USE_VIDEO_MODULE
+#$(warning "wlz here  use if only  ffmpeg")
+#endif
+
 ifdef CGE_USE_VIDEO_MODULE
-
+$(warning "wlz here define use ffmpeg")
 VIDEO_MODULE_DEFINE = -D_CGE_USE_FFMPEG_ 
-
 endif
 
 ifndef CGE_RELEASE_MODE
@@ -133,7 +142,7 @@ LOCAL_CFLAGS := $(LOCAL_CFLAGS) -D_CGE_USE_FACE_MODULE_
 endif
 
 ifndef CGE_USE_VIDEO_MODULE
-
+$(warning "wlz here define check,  not def use_video_module")
 #LOCAL_CFLAGS := $(LOCAL_CFLAGS) -D_CGE_ONLY_FILTERS_
 
 include $(BUILD_SHARED_LIBRARY)

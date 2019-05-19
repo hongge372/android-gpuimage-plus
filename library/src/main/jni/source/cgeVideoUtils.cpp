@@ -23,7 +23,7 @@ extern "C"
 {
     JNIEXPORT jboolean JNICALL Java_org_wysaid_nativePort_CGEFFmpegNativeLibrary_nativeGenerateVideoWithFilter(JNIEnv *env, jclass cls, jstring outputFilename, jstring inputFilename, jstring filterConfig, jfloat filterIntensity, jobject blendImage, jint blendMode, jfloat blendIntensity, jboolean mute)
     {
-        CGE_LOG_INFO("##### nativeGenerateVideoWithFilter!!!");
+        CGE_LOG_INFO("wlz ##### nativeGenerateVideoWithFilter!!!");
         
         if(outputFilename == nullptr || inputFilename == nullptr)
             return false;
@@ -61,7 +61,7 @@ extern "C"
         if(configStr != nullptr)
             env->ReleaseStringUTFChars(filterConfig, configStr);
         
-        CGE_LOG_INFO("generate over!\n");
+        CGE_LOG_INFO("wlz generate over!\n");
         
         delete glContext;
         
